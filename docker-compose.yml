@@ -1,9 +1,16 @@
 version: '3.8'
 services:
   web:
+    container_name: apache-bare
     image: httpd:latest
     ports:
     - "8080:80"
+    networks:
+    - red-caddy
     volumes:
     - ./html:/usr/local/apache2/htdocs/
 
+
+networks:
+  red_caddy:
+    external: true
