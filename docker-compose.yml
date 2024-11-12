@@ -6,7 +6,7 @@ services:
     ports:
     - "8080:80"
     networks:
-    - red-caddy
+    - red_caddy
     volumes:
     - ./html:/usr/local/apache2/htdocs/
 
